@@ -1,0 +1,2 @@
+# sonic_theme_tink
+基于tink923的TXT风格的sonic主题
