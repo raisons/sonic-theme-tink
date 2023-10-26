@@ -1,0 +1,23 @@
+{{- define "tink/index" -}}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{{ .blog_title }}</title>
+    {{ template "tink/module/head" .}}
+</head>
+{{ template "tink/module/style" .}}
+<body name="top">
+    <tt>
+        {{ template "tink/module/header" .}}
+        <hr>
+        {{ range $post:=.posts.Content }}
+        {{ unix_milli_time_format "2006/01/02" $post.CreateTime }}
+        <a href="{{$post.FullPath}}">{{$post.Title}}</a>
+        <br>
+        {{ end }}
+        <hr>
+        {{ template "tink/module/footer" .}}
+    </tt>
+</body>
+</html>
+{{- end -}}

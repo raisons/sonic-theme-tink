@@ -1,0 +1,11 @@
+{{- define "tink/module/footer" -}}
+
+{{ template "global.footer" . }}
+
+<a href="javascript:window.scrollTo( 0, 0 );" target="_self" id="top">回到顶部</a>
+{{if .settings.highlight }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+{{end}}
+
+{{end}}

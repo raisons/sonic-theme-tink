@@ -1,0 +1,30 @@
+{{- define "tink/archives" -}}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{{ .blog_title }}</title>
+    {{ template "tink/module/head" .}}
+</head>
+{{ template "tink/module/style" .}}
+<body name="top">
+    <tt>
+        {{ template "tink/module/header" .}}
+        <hr>
+        {{range $archive:=.archives}}
+        {{$archive.Year}}
+        <ul>
+        {{range $post:=$archive.Posts}}
+        <li>
+            <span class="date">{{unix_milli_time_format "2006-01-02" $post.CreateTime}}</span>
+            <a href="{{$post.FullPath}}" title="{{$post.Title}}">{{$post.Title}}</a>
+        </li>
+        {{end}}
+        </ul>
+        {{end}}
+
+        <hr>
+        {{ template "tink/module/footer" .}}
+    </tt>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,31 @@
+style:
+  label: 样式设置
+  items:
+    highlight:
+      name: highlight
+      label: 代码高亮
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    highlight_style:
+      name: highlight_style
+      label: 代码高亮样式
+      type: select
+      data-type: string
+      default: 'monokai'
+      options:
+        - value: 'monokai'
+          label: 'monokai'
+        - value: 'default'
+          label: 'default'
+        - value: 'github'
+          label: 'github'
+        - value: 'idea'
+          label: 'idea'
+        - value: 'xcode'
+          label: 'xcode'

@@ -1,0 +1,22 @@
+{{- define "tink/links" -}}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{{ .blog_title }}</title>
+    {{ template "tink/module/head" .}}
+</head>
+{{ template "tink/module/style" .}}
+<body name="top">
+    <tt>
+        {{ template "tink/module/header" .}}
+        <hr>
+        <h2>友情链接</h2>
+        {{range $link:=listLinks }}
+        <a href="{{ $link.URL }}" target="_blank" style="text-decoration: none;">{{$link.Name}}</a>
+        {{end}}
+        <hr>
+        {{ template "tink/module/footer" .}}
+    </tt>
+</body>
+</html>
+{{- end -}}

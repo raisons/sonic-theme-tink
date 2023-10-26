@@ -1,0 +1,77 @@
+{{- define "tink/module/style" -}}
+
+<style>
+    body {
+        word-break: break-all;
+        word-wrap: break-word;
+        text-align:justify
+    }
+
+    img {
+        max-width:100%
+    }
+
+    pre {
+        background: #f7f7f7 !important;
+        margin: 1.25rem 0;
+        overflow: auto;
+        color: #4d4d4c;
+        line-height:1.75;
+    }
+
+    pre code {
+        background: #f7f7f7 !important;
+        text-shadow: none;
+        padding: 0;
+        margin:0
+    }
+
+    blockquote {
+        padding: 0 15px;
+        color: #666;
+        border-left:4px solid #ddd
+    }
+
+    table {
+        width: 100%;
+        display: table;
+        border-spacing: 2px;
+        margin: 20px 0;
+        letter-spacing:0
+    }
+
+    td, th {
+        display: table-cell;
+        padding: 5px;
+        text-align:center
+    }
+
+    th {
+        background:#DDD
+    }
+
+    td {
+        background: #EEE;
+        text-align: left;
+        padding: 5px 10px;
+        font-size:14px
+    }
+
+    tr:hover td {
+        background:#ffa
+    }
+
+    #top {
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        opacity: 1;
+        cursor:pointer
+    }
+
+    h1:before, h2:before, h3:before {
+        content: '# ';
+        color: #000
+    }
+</style>
+{{end}}

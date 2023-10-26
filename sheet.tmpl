@@ -1,0 +1,19 @@
+{{- define "tink/sheet" -}}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{{ .blog_title }}</title>
+    {{ template "tink/module/head" .}}
+</head>
+{{ template "tink/module/style" .}}
+<body name="top">
+    <tt>
+        {{ template "tink/module/header" .}}
+        <hr>
+        <article>{{noescape .sheet.Content}}</article>
+        <hr>
+        {{ template "tink/module/footer" .}}
+    </tt>
+</body>
+</html>
+{{end}}

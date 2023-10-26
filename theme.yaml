@@ -1,0 +1,11 @@
+id: tink
+name: tink
+author:
+  name: raison
+  website: https://github.com/raisons
+description: Sonic Theme For tink923
+logo: https://avatars.githubusercontent.com/u/20410276?v=4
+website: https://github.com/raisons/sonic_theme_tink
+repo: https://github.com/raisons/sonic_theme_tink
+version: 1.0.1
+require: 1.0.0

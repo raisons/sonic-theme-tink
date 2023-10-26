@@ -1,0 +1,6 @@
+{{- define "tink/module/header" -}}
+<b><a href="/">{{- .blog_title -}}</a></b>&nbsp;
+{{- range $menu:=listMenu -}}
+<a href="{{$menu.URL}}" target="{{$menu.Target}}">{{- $menu.Name -}}</a>&nbsp;&nbsp;
+{{- end -}}
+{{- end -}}
